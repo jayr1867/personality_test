@@ -124,6 +124,10 @@ void questions(set<Question> &Q, map<char, int> &score) {
 	print_opt();
 	cout << "Enter your answer here (1-5): ";
 	cin >> ans;
+	while(ans < 1 || ans > 5) {
+		cout << "Enter your answer here (ONLY 1-5): ";
+		cin >> ans;
+	}
 	answer[it] = ans;
 
 	temp = scoresFrom(answer);
